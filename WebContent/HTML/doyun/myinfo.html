@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        /* border: 1px solid black; */
+        outline: none;
+    }
+    .container {
+        width: 1200px;
+        margin: 0px auto;
+        color: #444;
+    }
+    #withdrawal {
+        float: right;
+        font-size: 0.5em;
+        font-weight: normal;
+        color: #bbb;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    #withdrawal:hover {
+        border-bottom: 1px solid #bbb;
+    }
+    .input-label {
+        width: 1200px;
+        margin: 20px auto;
+        min-height: 45px;
+    }
+    .input-label label {
+        display: inline-block;
+        width: 15%;
+        height: 45px;
+        float: left;
+        margin-top: 10px;
+        /* font-size: 1.2em; */
+        color: #444;
+        /* font-weight: bold; */
+    }
+    .input-label .essential {
+        color: tomato;
+    }
+    .input-wrap {
+        display: inline-block;
+        width: 84%;
+    }
+    .input-wrap input {
+        width: 98.5%;
+        height: 45px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding-left: 10px;
+    }
+    .input-wrap .padding-custom {
+        font-size: 0.8em;
+        margin-top: 2px;
+        padding-left: 3px;
+    }
+    .input-wrap .phone {
+        width: 28%;
+        float: left;
+        margin-right:10px;
+    }
+    .input-wrap .phone input {
+        width: 95%;
+    }
+    .input-content button {
+        height: 47px;
+        border: none;
+        background-color: #B3E835;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 10px;
+        width: 130px;
+        font-size: 1.1em;
+    }
+    .input-wrap .birth {
+        width: 31.7%;
+        float: left;
+        margin-right: 19px;
+    }
+    .input-wrap .birth:last-child {
+        margin-right: 0;
+    }
+    .input-wrap.address input{
+        margin-bottom: 10px;
+    }
+    .input-wrap .my-profile img {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        background-color: #ddd;
+        padding: 25px;
+        display: block;
+    }
+    .input-wrap textarea {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        width: 97%;
+        height: 100px;
+        padding: 10px;
+        font-family: '맑은 고딕';
+    }
+    .action-btn {
+        width: 1200px;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .action-btn button {
+        height: 52px;
+        border: none;
+        background-color: #B3E835;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 10px;
+        width: 700px;
+        font-size: 1.1em;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <h2>정보수정<small id="withdrawal">회원탈퇴하기</small></h2>
+        <form action="">
+            <div class="input-content">
+                <div class="input-label">
+                    <label for="">아이디<span class="essential">*</span></label>
+                    <div class="input-wrap">
+                        <input type="text" name="user_id" value="doyunnnnn" disabled>
+                    </div>
+                </div>
+                <div class="input-label">
+                    <label for="">비밀번호<span class="essential">*</span></label>
+                    <div class="input-wrap">
+                        <input type="password" name="user_password" maxlength="20" oninput="maxLengthCheck(this)" placeholder="비밀번호">
+                        <p class="padding-custom">공백 없는 영문,숫자포함 6~20자</p>
+                    </div>
+                </div>
+                    <div class="input-label">
+                        <label for="">비밀번호 확인<span class="essential">*</span></label>
+                        <div class="input-wrap">
+                            <input type="password" name="user_password_check" maxlength="20" oninput="maxLengthCheck(this)" placeholder="비밀번호 재입력">
+                            <p class="padding-custom">비밀번호를 다시한번 입력해주세요.</p>
+                        </div>
+                    </div>
+                                                        <div class="input-label">
+                    <label for="">이름<span class="essential">*</span></label>
+                    <div class="input-wrap">
+                        <input type="text" name="user_name" value="이도윤" >
+                    </div>
+                </div>
+                <div class="input-label">
+                    <label for="">닉네임<span class="essential">*</span></label>
+                    <div class="input-wrap">
+                        <input type="text" name="user_nickname" maxlength="6" oninput="maxLengthCheck(this)" value="콩지어멈">
+                        <p class="padding-custom">공백 없는 문자 최대 6자</p>
+                    </div>
+                </div>
+                <div class="input-label">
+                    <label for="">이메일<span class="essential">*</span></label>
+                    <div class="input-wrap ">
+                        <input type="text" placeholder="" name="user_email"   value="doyunnnnn@gmail.com" >
+                        
+                    </div>
+                </div>
+                <div class="input-label">
+                    <label for="">휴대폰번호<span class="essential">*</span></label>
+                    <div class="input-wrap">
+                        <div class="drop-content phone">
+                            <input name='user_phone1' type="number" maxlength="3" oninput="maxLengthCheck(this)" value="010" disabled>
+                        </div>
+                        <div class="drop-content phone">
+                            <input name='user_phone2' type="number" maxlength="4" oninput="maxLengthCheck(this)" value="7279" disabled>
+                        </div>
+                        <div class="drop-content phone">
+                            <input name='user_phone3' type="number" maxlength="4" oninput="maxLengthCheck(this)" value="0703" disabled>
+                        </div>
+                        <button type="button" id="sendSMSbtn" onclick="pageMypage.sendSMSphone()" value="edit">수정</button>
+                    </div>
+                </div>
+                <div class="input-label" id="check_sms" style="display: none;">
+                    <label for="">인증번호<span class="essential">*</span></label>
+                    <div class="input-wrap margin-custom account">
+                        <input type="text" id="sms_str" maxlength="4" placeholder="인증번호를 입력해주세요.">
+                        <input type="hidden" name="phone_check" id="phone_check" value=" Y ">
+                        <button type="button" onclick="pageMypage.check_phone_sms()">인증하기</button>
+                    </div>
+                </div>
+                <div class="input-label">
+                    <label for="">생년월일</label>
+                    <div class="input-wrap birth-box">
+                        <div class="drop-content birth">
+                            <input name='user_birth1' type="number" maxlength="4" oninput="maxLengthCheck(this)" placeholder="연도">
+                        </div>
+                        <div class="drop-content birth">
+                            <input name='user_birth2' type="number" maxlength="2" oninput="maxLengthCheck(this)" placeholder="월">
+                        </div>
+                        <div class="drop-content birth">
+                            <input name='user_birth3' type="number" maxlength="2" oninput="maxLengthCheck(this)" placeholder="일">
+                        </div>
+                    </div>
+                </div>
+                <div class="input-label">
+                    <label for="">주소</label>
+                    <div class="input-wrap address">
+                        <input type="text" name="user_addr1" placeholder="우편번호" value="" disabled style="width: 84.5%; margin-right: 5px;">
+                        <button type="button" onclick="return_execDaumPostcode()">주소검색</button>
+                        <input type="text" name="user_addr2" placeholder="주소" value="" disabled>
+                        <input type="text" name="user_addr3" placeholder="상세주소 입력" value="">
+                    </div>
+                </div>
+                <div class="input-label" style="height: 170px;">
+                    <label for="">프로필사진</label>
+                    <div class="input-wrap">
+                        <div class="my-profile">
+                            <label for="user_img" id="user_img_view"><img src="/WEB-INF/images/icons/046-cat-gray.png"></label>
+                            <input type="file" id="user_img" accept="image/*, .jfif" name="user_img" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+                <div class="input-label">
+                    <label for="">자기소개</label>
+                    <div class="input-wrap">
+                        <textarea style="resize: none;" name='user_etc' placeholder="자기소개를 입력해주세요.(50자 이내)"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="action-btn">
+                <button type="button">정보수정</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,10 +1,240 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/47d17588e6.js" crossorigin="anonymous"></script>
 </head>
+<style>
+    * {
+        /* border: 1px solid gray; */
+    }
+    .container {
+        width: 1200px;
+        margin: 0px auto;
+        color: #444;
+    }
+    .mypage h2 {
+        text-align: center;
+        font-size: 2.2em;
+    }
+    .mypage #menu_bar {
+        width: 100%;
+        border-bottom: 1px solid #dedede;
+
+    }
+    .mypage ul, .mypage li {
+        list-style: none;
+    }
+    .mypage ul {
+        display: block;
+        margin: 0px auto;
+        width: 630px;
+        height: 37px;
+    }
+    .mypage li {
+        float: left;
+        cursor: pointer;
+        margin-right: 50px;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 29px;
+        padding-bottom: 6px;
+        color: rgba(30, 38, 44, 0.5);
+        border-bottom: 3px solid white;
+    }
+    .mypage #menu_bar li.active {
+        border-bottom: 3px solid #B3E835;
+        color: #B3E835;
+        font-weight: bold;
+    }
+    .content h3 {
+        font-size: 1.5em;   
+    }
+    .content .detail {
+        float: right;
+        margin-top: 15px;
+        font-size: 0.5em;
+        font-weight: normal;
+        color: #bbb;
+        cursor: pointer;
+    }
+    .content .detail:hover {
+        border-bottom: 1px solid #bbb;
+    }
+
+    /* MY스티커 */
+    .mypage .content {
+        width: 95%;
+        margin: 0px auto;
+    }
+    .mypage .sticker table {
+        width: 100%;
+        margin: 0px auto;
+        border-collapse: separate;
+        border-spacing: 10px 10px;
+    }
+
+    .mypage .sticker th {
+        background-color: #B3E835;
+        color: white;
+        border-radius: 10px;
+        width: 25%;
+        height: 40px;
+        margin: 10px 10px;
+    }
+    .mypage .sticker td {
+        border: 1px solid #dedede;
+        border-radius: 10px;
+        height: 80px;
+        text-align: center;
+        color: #666;
+        font-size: 1.2em;
+    }
+    .mypage .sticker img{
+        width: 65px;
+    }
+    .mypage .pet .pets {
+        border: 1px solid #dedede;
+        border-radius: 10px;
+        width: 270px;
+        margin-left: 10px;
+        float: left;
+    }
+    .pets .img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        border: 1px solid #dedede;
+        margin: 20px auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .pets .text {
+        text-align: center;
+        margin: 10px auto;
+    }
+    .order table {
+        width: 100%;
+        margin: 0px auto;
+        border-collapse: collapse;
+        border: 1px solid white;
+        /* border-spacing: 10px 10px; */
+    }
+    .order th {
+        background-color: #B3E835;
+        color: white;
+        border: 1px solid white;
+        /* border-radius: 5px; */
+        height: 30px;   
+        /* margin: 10px 10px; */
+    }
+    .order tbody tr:hover {
+        background-color: #efefef;
+    }
+    .order td {
+        border-bottom: 1px solid #ccc;
+        /* border-radius: 5px; */
+        height: 30px;
+        text-align: center;
+        color: #666;
+        font-size: 0.8em;
+        cursor: pointer;
+    }
+
+
+</style>
 <body>
+    
+    <div class="container mypage">
+
+        <h2>닉네임님의 페이지</h2>
+        <div id="menu_bar">
+            <ul>
+                <li class="active">마이 홈</li>
+                <li>프로필</li>
+                <li>반려동물</li>
+                <li>게시글</li> <!-- 상품후기, 상품문의? -->
+                <li>MY쇼핑</li> <!-- 주문내역, 스티커내역 -->
+                <li style="display:block; clear: both;"></li>
+            </ul>
+        </div>
+
+        <div class="sticker content">
+            <h3>MY 스티커<small class="detail">▶더보기</small></h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>누적 구매액</th>
+                        <th>누적 스티커</th>
+                        <th>사용 스티커</th>
+                        <th>현재 스티커</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>365,120원</td>
+                        <td>73개</td>
+                        <td>10개</td>
+                        <td>63개</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pet content">
+            <h3>반려동물<small class="detail">▶더보기</small></h3>
+            <div class="pets">
+                <div class="img" style="background-image: url(/WEB-INF/images/petprofile/KakaoTalk_20200907_191958447.jpg);"></div>
+                <div class="name text"><i class="fas fa-dog"></i>일랑<i class="fas fa-mars"></i></div>
+                <div class="birthday text">2016-06-23</div>
+                <div class="species text">노르웨이 숲</div>
+            </div>
+            <div class="pets">
+                <div class="img" style="background-image: url(/WEB-INF/images/petprofile/2016-03-12\ 10.04.12\ 2.jpg);"></div>
+                <div class="name text"><i class="fas fa-cat"></i>콩지<i class="fas fa-venus"></i></div>
+                <div class="birthday text">2015-04-24</div>
+                <div class="species text">믹스</div> 
+            </div>  
+            <div class="pets">
+                <div class="img" style="background-image: url(/WEB-INF/images/petprofile/KakaoTalk_20200907_192619684.jpg);"></div>
+                <div class="name text"><i class="fas fa-cat"></i>구름<i class="fas fa-venus"></i></div>
+                <div class="birthday text">2013-11-05</div>
+                <div class="species text">믹스</div> 
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="order content">
+            <h3>주문내역<small class="detail">▶더보기</small></h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">주문 날짜</th>
+                        <th style="width: 50%;">주문 내역</th>
+                        <th style="width: 15%;">주문 금액</th>
+                        <th style="width: 15%;">주문 현황</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2020-09-08 12:18:37</td>
+                        <td>먼지없는 고양이 벤토모래 오로라샌드폼... 외 2건</td>
+                        <td>57,600원</td>
+                        <td>배송중</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
 
 </body>
 </html>
