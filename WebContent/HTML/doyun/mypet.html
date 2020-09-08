@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/47d17588e6.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    .container {
+        width: 1200px;
+        margin: 0px auto;
+        color: #444;
+    }
+    .mypet .pet .pets {
+        border: 1px solid #dedede;
+        border-radius: 10px;
+        width: 270px;
+        margin-left: 10px;
+        float: left;
+        text-align: center;
+    }
+    .mypet .pets .img {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        border: 1px solid #dedede;
+        margin: 35px auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .mypet .pets .text {
+        text-align: center;
+        margin: 15px auto;
+        margin-top: -15px;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .mypet .pets i {
+        color: #888;
+    }
+    .mypet .pets button {
+        border: 1px solid #B3E835;
+        background-color: white;
+        color: #B3E835;
+        font-weight: bold;
+        border-radius: 20px;
+        width: 200px;
+        height: 40px;
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+    .action-btn {
+        width: 1200px;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .action-btn button {
+        height: 52px;
+        border: none;
+        background-color: #B3E835;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 10px;
+        width: 700px;
+        font-size: 1.1em;
+    }
+</style>
+<body>
+    <div class="container mypet">
+        <h2>반려동물정보</h2>
+        <div class="pet">
+            <div class="pets">
+                <div class="img" style="background-image: url(/WEB-INF/images/petprofile/KakaoTalk_20200907_191958447.jpg);"></div>
+                <div class="name text">일랑 <i class="fas fa-mars"></i></div>
+                <button>상세보기</button>
+            </div>
+            <div class="pets">
+                <div class="img" style="background-image: url(/WEB-INF/images/petprofile/2016-03-12\ 10.04.12\ 2.jpg);"></div>
+                <div class="name text">콩지 <i class="fas fa-venus"></i></div>
+                <button>상세보기</button>
+
+            </div>  
+            <div class="pets">
+                <div class="img" style="background-image: url(/WEB-INF/images/petprofile/KakaoTalk_20200907_192619684.jpg);"></div>
+                <div class="name text">구름 <i class="fas fa-venus"></i></div>
+                <button>상세보기</button>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="action-btn">
+            <button type="button">반려동물 추가하기</button>
+        </div>
+
+    </div>
+</body>
+</html>

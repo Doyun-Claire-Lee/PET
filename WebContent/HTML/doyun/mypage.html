@@ -101,19 +101,34 @@
         width: 270px;
         margin-left: 10px;
         float: left;
+        text-align: center;
     }
     .pets .img {
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
         border: 1px solid #dedede;
-        margin: 20px auto;
+        margin: 35px auto;
         background-repeat: no-repeat;
         background-size: cover;
     }
     .pets .text {
         text-align: center;
-        margin: 10px auto;
+        margin: 15px auto;
+        margin-top: -15px;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .pets button {
+        border: 1px solid #B3E835;
+        background-color: white;
+        color: #B3E835;
+        font-weight: bold;
+        border-radius: 20px;
+        width: 200px;
+        height: 40px;
+        margin-bottom: 30px;
+        cursor: pointer;
     }
     .order table {
         width: 100%;
@@ -187,21 +202,19 @@
             <h3>반려동물<small class="detail">▶더보기</small></h3>
             <div class="pets">
                 <div class="img" style="background-image: url(/WEB-INF/images/petprofile/KakaoTalk_20200907_191958447.jpg);"></div>
-                <div class="name text"><i class="fas fa-dog"></i>일랑<i class="fas fa-mars"></i></div>
-                <div class="birthday text">2016-06-23</div>
-                <div class="species text">노르웨이 숲</div>
+                <div class="name text">일랑 <i class="fas fa-mars"></i></div>
+                <button>상세보기</button>
             </div>
             <div class="pets">
                 <div class="img" style="background-image: url(/WEB-INF/images/petprofile/2016-03-12\ 10.04.12\ 2.jpg);"></div>
-                <div class="name text"><i class="fas fa-cat"></i>콩지<i class="fas fa-venus"></i></div>
-                <div class="birthday text">2015-04-24</div>
-                <div class="species text">믹스</div> 
+                <div class="name text">콩지 <i class="fas fa-venus"></i></div>
+                <button>상세보기</button>
+
             </div>  
             <div class="pets">
                 <div class="img" style="background-image: url(/WEB-INF/images/petprofile/KakaoTalk_20200907_192619684.jpg);"></div>
-                <div class="name text"><i class="fas fa-cat"></i>구름<i class="fas fa-venus"></i></div>
-                <div class="birthday text">2013-11-05</div>
-                <div class="species text">믹스</div> 
+                <div class="name text">구름 <i class="fas fa-venus"></i></div>
+                <button>상세보기</button>
             </div>
             <div style="clear: both;"></div>
         </div>
